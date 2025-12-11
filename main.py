@@ -45,3 +45,15 @@ async def double_number(number: int) -> dict[str, int]:
         "input": number,
         "result": number * 2
     }
+
+@app.get("/random_quote")
+async def get_random_quote() -> dict[str, str]:
+    quotes = [
+        "失敗は成功のもと",
+        "継続は力なり",
+        "千里の道も一歩から",
+        "七転び八起き",
+        "為せば成る為さねばならぬ何事もナセルはアラブの大統領"
+    ]
+    return {"quote": random.choice(quotes)}
+
