@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from datetime import datetime
+import random
 
 app = FastAPI()
 
