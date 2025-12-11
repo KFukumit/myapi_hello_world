@@ -25,7 +25,7 @@ async def read_root() -> dict[str, str]:
     return {"message": "hello world! こんにちは！"}
 
 @app.get("/current_time")
-async def get_current?time() -> dict[str, str]:
+async def get_current_time() -> dict[str, str]:
     now = datetime.now()
     return{
         "current_time": now.strftime("%Y-%m-%d %H:%M:%S"),
