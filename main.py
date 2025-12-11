@@ -38,3 +38,10 @@ async def greet_user(name: str) -> dict[str, str]:
         "message": f"こんにちは、{name}さん！",
         "timestamp": datetime.now().strftime("%H:%M:%S")
     }
+
+@app.get("/double/{number}")
+async def double_number(number: int) -> dict[str, int]:
+    return{
+        "input": number,
+        "result": number * 2
+    }
