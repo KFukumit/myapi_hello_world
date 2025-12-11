@@ -31,3 +31,10 @@ async def get_current_time() -> dict[str, str]:
         "current_time": now.strftime("%Y-%m-%d %H:%M:%S"),
         "timezone": "Asia/Tokyo"
     }
+
+@app.get("/greet/{name}")
+async def greet_user(name: str) -> dict[str, str]:
+    return{
+        "message": f"こんにちは、{name}さん！",
+        "timestamp": datetime.now().strftime("%H:%M:%S")
+    }
